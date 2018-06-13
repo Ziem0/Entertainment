@@ -3,7 +3,8 @@ package com.entertainment.cipher.models;
 import com.entertainment.cipher.exceptions.WrongKeyException;
 import com.entertainment.cipher.interfaces.EnigmaService;
 
-public class CesarEnigma implements EnigmaService{
+public class CesarEnigma implements EnigmaService {
+
     private Integer key = 0;
 
     private String calculate(String input) {

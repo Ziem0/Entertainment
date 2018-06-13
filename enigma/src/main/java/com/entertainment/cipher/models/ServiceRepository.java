@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ServiceRepository implements ServiceRegistry, ServiceProvider {
+public final class ServiceRepository implements ServiceRegistry, ServiceProvider {
+
     private static ServiceRepository instance = null;
     private List<EnigmaService> services = null;
 

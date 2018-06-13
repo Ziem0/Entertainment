@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/enigma/.gitignore" afterPath="$PROJECT_DIR$/enigma/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/enigma/src/main/java/com/entertainment/cipher/models/CesarEnigma.java" afterPath="$PROJECT_DIR$/enigma/src/main/java/com/entertainment/cipher/models/CesarEnigma.java" />
-    </list>
+    <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/enigma/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -474,12 +471,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528889862722</updated>
-      <workItem from="1528889865973" duration="12463000" />
+      <workItem from="1528889865973" duration="12523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12463000" />
+    <option name="totallyTimeSpent" value="12523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1329" height="780" extended-state="6" />

@@ -1,4 +1,4 @@
-cdpackage com.entertainment.cipher.models;
+package com.entertainment.cipher.models;
 
 import com.entertainment.cipher.exceptions.WrongKeyException;
 import com.entertainment.cipher.interfaces.EnigmaService;

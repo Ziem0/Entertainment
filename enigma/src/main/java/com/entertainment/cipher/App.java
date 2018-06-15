@@ -1,6 +1,7 @@
 package com.entertainment.cipher;
 
 import com.entertainment.cipher.controllers.Command;
+import com.entertainment.cipher.controllers.TerminalTranslator;
 import com.entertainment.cipher.exceptions.InvalidCommandException;
 import com.entertainment.cipher.interfaces.Module;
 import com.entertainment.cipher.models.CesarEnigma;
@@ -23,8 +24,13 @@ public class App {
             e.printStackTrace();
         }
 
-
-
+        Module terminal = new TerminalTranslator(cmd.getEnigmaName()
+                , cmd.getKey()
+                , cmd.getIsListCmd()
+                , cmd.getIsEncipherCmd()
+                , cmd.getIsDecipherCmd());
+        terminal.initialize(repo);
+        terminal.start();
 
     }
 }

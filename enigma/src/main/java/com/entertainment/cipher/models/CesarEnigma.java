@@ -7,22 +7,20 @@ public class CesarEnigma implements EnigmaService {
 
     private Integer key = 0;
 
-    private String calculate(String input) {
+    private String calculate(String input){
         String cipher = "";
-        for (char ch : input.toCharArray()) {
-            if (!(ch > 56 && ch < 64) && !(ch > 89 && ch < 96)) {
+            for (char ch : input.toCharArray()) {
                 ch += key;
-                if (ch > 'z') {
-                    int diff = ch % 121;
-                    ch = 46;
-                    ch += diff;
-                } else if (ch < '0') {
-                    int diff = 47 % ch;
-                    ch = 121;
-                    ch -= diff;
-                }
-            }
-            cipher += String.valueOf(ch);
+//                if (ch > 'z') {
+//                    int diff = ch % 122;
+//                    ch = 47;
+//                    ch += diff;
+//                } else if (ch < '0') {
+//                    int diff = 48 % ch;
+//                    ch = 123;
+//                    ch -= diff;
+//                }
+                cipher += String.valueOf(ch);
         }
         return cipher;
     }
@@ -54,9 +52,13 @@ public class CesarEnigma implements EnigmaService {
 
 //    public static void main(String[] args) throws WrongKeyException {
 //        CesarEnigma c = new CesarEnigma();
-//        c.setKey("-2");
-//        System.out.printf("ciphered: %s\n",c.encipher("ziemo"));
-//        System.out.printf("deciphered: %s\n", c.decipher("xgckm"));
+//        c.setKey("2");
+//        String r = c.encipher("9nia");
+//        System.out.println(r);
+//        System.out.println(c.decipher(r));
+//        System.out.printf("ciphered: %s\n",c.encipher("0nia"));
+//        System.out.printf("deciphered: %s\n", c.decipher("wlg_"));
 //        System.out.println(c.getName());
+//        System.out.println((char)65);
 //    }
 }

@@ -99,6 +99,6 @@ public class Command {
     }
 
     private boolean isKeyCorrect() {
-        return args.length == 3 && args[KEY_ID].matches("[1-9]{1,}");
+        return args.length == 3 && args[KEY_ID].matches("[0-9-]{1,}");
     }
 }

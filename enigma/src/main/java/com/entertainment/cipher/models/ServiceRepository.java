@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public final class ServiceRepository implements ServiceRegistry, ServiceProvider {
 
     private static ServiceRepository instance = null;
-    private List<EnigmaService> services = null;
+    private List<EnigmaService> services = null;   // static
 
     private ServiceRepository() {
         this.services = new ArrayList<>();

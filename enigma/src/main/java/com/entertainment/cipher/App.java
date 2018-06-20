@@ -31,6 +31,5 @@ public class App {
                 , cmd.getIsDecipherCmd());
         terminal.initialize(repo);
         terminal.start();
-
     }
 }

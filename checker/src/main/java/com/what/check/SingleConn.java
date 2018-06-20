@@ -17,7 +17,7 @@ public class SingleConn {
 
     public static Connection getConn() {
         if (conn == null) {
-            synchronized (DB.class) {
+            synchronized (SingleConn.class) {
                 if (conn == null) {
                     startConnection();
                 }
@@ -67,7 +67,6 @@ public class SingleConn {
         create();
         insert();
         close();
-        System.out.println("Asd");
     }
 }
 

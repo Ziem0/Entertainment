@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="checker" />
         <module name="enigma" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="checker" target="1.8" />
       <module name="enigma" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>

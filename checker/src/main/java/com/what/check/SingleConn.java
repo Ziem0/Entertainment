@@ -1,11 +1,12 @@
 package com.what.check;
 
+import org.flywaydb.core.Flyway;
 import org.sqlite.core.DB;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.swing.plaf.nimbus.State;
+import java.io.File;
+import java.sql.*;
+import java.util.Scanner;
 
 public class SingleConn {
 
@@ -54,6 +55,52 @@ public class SingleConn {
         }
     }
 
+    public static void update() {
+        String command = "update person set name='Ziemowit' where name='ziemo'";
+        try {
+            Statement stat = conn.createStatement();
+            stat.executeUpdate(command);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insert2() {
+        Scanner sc = new Scanner(System.in);
+        String command = "insert into person values(?,?)";
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement(command);
+            preparedStatement.setString(1, sc.next());
+            preparedStatement.setInt(2, sc.nextInt());
+            preparedStatement.addBatch();
+            preparedStatement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void getAll() {
+        String query = "select * from person";
+        select(query);
+    }
+
+    private static void select(String query) {
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet result = stat.executeQuery(query);
+            ResultSetMetaData meta = result.getMetaData();
+            int attrV = meta.getColumnCount();
+            for (int i = 1; i <= attrV; i++) {
+                System.out.printf("%-10s",meta.getColumnLabel(i));
+            }
+            while (result.next()) {
+                System.out.printf("\n%-10s %-10s",result.getString(1),result.getString(2));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void close() {
         try {
             conn.close();
@@ -62,14 +109,21 @@ public class SingleConn {
         }
     }
 
+    public static void dbMigration() {
+        Flyway fw = new Flyway();
+        fw.setDataSource(DB_URL, "ziemo", null);
+        fw.migrate();
+    }
+
     public static void main(String[] args) {
-        getConn();
-        create();
-        insert();
+        dbMigration();
+//        getConn();
+//        create();
+//        insert();
+//        update();
+//        getAll();
         close();
     }
 }
 
-// dokonczyc metody select itd
-// flyway
 // sql cwiczenia

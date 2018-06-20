@@ -67,6 +67,7 @@ public class SingleConn {
         create();
         insert();
         close();
+        System.out.println("Asd");
     }
 }
 

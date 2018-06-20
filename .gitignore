@@ -1,1 +1,4 @@
 /target/
+!/checker/src/main/java/com/what/check/SingleConn.java
+enigma/src/main/java/com/entertainment/cipher/dao/
+/checker/src/main/java/com/what/check/SingleConn.java

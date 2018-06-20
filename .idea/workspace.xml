@@ -4,8 +4,6 @@
     <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/checker/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/checker/src/main/java/com/what/check/SingleConn.java" afterPath="$PROJECT_DIR$/checker/src/main/java/com/what/check/SingleConn.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/enigma/target/" />
@@ -686,7 +684,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30033000" />
+    <option name="totallyTimeSpent" value="30137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1329" height="780" extended-state="6" />

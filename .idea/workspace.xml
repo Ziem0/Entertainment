@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/App.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/ConnectionDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/ManagementDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/exceptions/DaoException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/User.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cinema/cinema.iml" afterPath="$PROJECT_DIR$/cinema/cinema.iml" />
-      <change beforePath="$PROJECT_DIR$/cinema/pom.xml" afterPath="$PROJECT_DIR$/cinema/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/enigma/src/main/java/com/entertainment/cipher/models/CesarEnigma.java" afterPath="$PROJECT_DIR$/enigma/src/main/java/com/entertainment/cipher/models/CesarEnigma.java" />
-    </list>
+    <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/enigma/target/" />
     <ignored path="$PROJECT_DIR$/checker/target/" />
@@ -703,12 +690,12 @@
       <workItem from="1529760204499" duration="2597000" />
       <workItem from="1530026563022" duration="2209000" />
       <workItem from="1530193807466" duration="11301000" />
-      <workItem from="1530272476207" duration="639000" />
+      <workItem from="1530272476207" duration="699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66801000" />
+    <option name="totallyTimeSpent" value="66861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1329" height="780" extended-state="6" />

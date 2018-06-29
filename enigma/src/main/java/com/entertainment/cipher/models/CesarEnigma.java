@@ -5,7 +5,7 @@ import com.entertainment.cipher.interfaces.EnigmaService;
 
 public class CesarEnigma implements EnigmaService {
 
-    private Integer key = 0;
+    private Integer key = 7;
 
     private String calculate(String input){
         String cipher = "";

@@ -54,7 +54,6 @@ public class Hall {
         int charInteger = 64;
         for (int i = columnLength; i > 0; i--) {
             charInteger++;
-
             for (int j = rowLength; j > 0; j--) {
                 String column = String.valueOf((char) charInteger);
                 seats.add(new Seat(j, column));
@@ -66,31 +65,25 @@ public class Hall {
         return seats.stream().filter(Seat::isAvailable).collect(Collectors.toList()).size();
     }
 
-    public boolean bookSeat(String column, int row) {   //rec deals amount of desired seats -> controller
+    public void bookSeat(String column, int row, int movieID) throws DaoException {   //rec deals amount of desired seats -> controller
         for (Seat s : seats) {
             if (s.getRow() == row && s.getColumn().equalsIgnoreCase(column) && s.isAvailable()) {
                 s.setSeatNotAvailable();
-
-                /// save seatDao
-                return true;
+                seatDao.save(movieID, s);
             }
         }
-        return false;
     }
 
-    public boolean unBookSeat(String column, int row) {   //rec deals amount of desired seats -> controller
+    public void unBookSeat(String column, int row, int movieID) throws DaoException {   //rec deals amount of desired seats -> controller
         for (Seat s : seats) {
             if (s.getRow() == row && s.getColumn().equalsIgnoreCase(column) && !s.isAvailable()) {
                 s.setSeatAvailable();
-
-                // remove seatDao later
-                return true;
+                seatDao.remove(movieID, s);
             }
         }
-        return false;
     }
 
-    public void addBookedSeats(int movieID) throws DaoException {
+    public void updateBookedSeats(int movieID) throws DaoException {
         HashMap<String , List<Integer>> bookedSeats = seatDao.getBookedSeats(movieID);   //// ???
         for (Seat s : seats) {
             for (String c : bookedSeats.keySet()) {
@@ -122,11 +115,5 @@ public class Hall {
             System.out.printf("%s\n", Strings.repeat("████",this.rowLength));
         }
     }
-
-//    public static void main(String[] args) throws DaoException {
-//        Hall hall = new Hall(1, 5, 3);
-//        hall.bookSeat("b", 2);
-//        hall.showHall();
-//    }
 }
 

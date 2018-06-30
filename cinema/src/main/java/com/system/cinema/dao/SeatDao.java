@@ -1,6 +1,7 @@
 package com.system.cinema.dao;
 
 import com.system.cinema.exceptions.DaoException;
+import com.system.cinema.modules.Seat;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -50,9 +51,34 @@ public class SeatDao {
         return bookedSeats;
     }
 
+    public void save(int movieID, Seat seat) throws DaoException {
+        String column = seat.getColumn();
+        int row = seat.getRow();
 
-    public static void main(String[] args) throws DaoException {
-        SeatDao dao = SeatDao.getDao();
-        dao.getBookedSeats(1).forEach((a, b) -> System.out.println(a + " " + b.get(0)));
+        try {
+            preparedStatement = conn.prepareStatement("INSERT INTO bookedSeat(movieID, column, row) VALUES(?,?,?);");
+            preparedStatement.setInt(1, movieID);
+            preparedStatement.setString(2, column);
+            preparedStatement.setInt(3, row);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused a problem");
+        }
+    }
+
+    public void remove(int movieID, Seat seat) throws DaoException {
+        String column = seat.getColumn();
+        int row = seat.getRow();
+        try {
+            preparedStatement = conn.prepareStatement("DELETE FROM bookedSeat WHERE `movieID` IS ? AND `row` IS ? AND `column` IS ?;");
+            preparedStatement.setInt(1, movieID);
+            preparedStatement.setInt(2, row);
+            preparedStatement.setString(3, column);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused a problem");
+        }
     }
 }

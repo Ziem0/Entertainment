@@ -57,10 +57,23 @@ public class Movie {
         return hour;
     }
 
+    public void bookSeat(String column, int row) throws DaoException {
+        this.getHall().bookSeat(column, row, this.id);
+    }
+
+    public void unBookSeat(String column, int row) throws DaoException {
+        this.getHall().unBookSeat(column, row, this.id);
+    }
+
+
 
     public static void main(String[] args) throws DaoException {
         MovieDao dao = MovieDao.getDao();
         Movie m = dao.getMovie(2);
+        m.bookSeat("A", 1);
+        m.bookSeat("B", 1);
+//        m.unBookSeat("A",1);
+//        m.unBookSeat("B",1);
         System.out.println(m.getTitle());
         System.out.println(m.getHall().calculateAvailableSeats());
         m.getHall().showHall();

@@ -33,7 +33,11 @@ public class Management {
         workerDao.getWorkers().forEach(System.out::println);
     }
 
-    //update worker
-    //delete worker
-    //view worker
+    public void removeWorker(int id) throws DaoException {
+        workerDao.remove(id);
+    }
+
+    //update worker --> controller
+    //delete worker --> controller --> list Worker and remove by ID
+    //view worker  --> controller
 }

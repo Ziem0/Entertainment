@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9672c5bf-74eb-43a7-8ead-f595000cd2a9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Seat.java" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cinema/pom.xml" afterPath="$PROJECT_DIR$/cinema/pom.xml" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/database.db" afterPath="$PROJECT_DIR$/cinema/src/main/resources/database.db" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.1__insert_worker.sql" afterPath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.1__insert_worker.sql" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.2__insert_customer.sql" afterPath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.2__insert_customer.sql" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.3__insert_movie.sql" afterPath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.3__insert_movie.sql" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.4__insert_hall.sql" afterPath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V2.4__insert_hall.sql" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V1.5__create_booked_seats.sql" afterPath="$PROJECT_DIR$/cinema/src/main/resources/db/migration/V1.5__create_booked_seats.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/enigma/target/" />
@@ -52,18 +44,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cinema/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
+            <state relative-caret-position="383">
               <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Management.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Management.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="473">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +66,8 @@
       <file leaf-file-name="Worker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="368">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#531#532#0" expanded="true" />
                 <element signature="e#556#557#0" expanded="true" />
@@ -101,8 +93,8 @@
       <file leaf-file-name="WorkerDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="533">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#425#426#0" expanded="true" />
@@ -122,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#967#968#0" expanded="true" />
@@ -146,16 +138,16 @@
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#507#508#0" expanded="true" />
                 <element signature="e#558#559#0" expanded="true" />
-                <marker date="1530381738265" expanded="true" signature="970:1058" ph="select movie... movie" />
-                <marker date="1530381738265" expanded="true" signature="1674:1743" ph="select movie... movie" />
-                <marker date="1530381738265" expanded="true" signature="3250:3325" ph="insert into movie... " />
-                <marker date="1530381738265" expanded="true" signature="4252:4316" ph="update movie... " />
-                <marker date="1530381738265" expanded="true" signature="4925:4956" ph="DELETE FROM movie... " />
+                <marker date="1530394975037" expanded="true" signature="970:1058" ph="select movie... movie" />
+                <marker date="1530394975037" expanded="true" signature="1674:1743" ph="select movie... movie" />
+                <marker date="1530394975037" expanded="true" signature="3253:3328" ph="insert into movie... " />
+                <marker date="1530394975037" expanded="true" signature="4255:4319" ph="update movie... " />
+                <marker date="1530394975037" expanded="true" signature="4928:4959" ph="DELETE FROM movie... " />
               </folding>
             </state>
           </provider>
@@ -165,7 +157,7 @@
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#867#868#0" expanded="true" />
@@ -183,11 +175,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SeatDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <marker date="1530394960513" expanded="true" signature="1030:1087" ph="SELECT colum... " />
+                <marker date="1530394960513" expanded="true" signature="1881:1939" ph="INSERT INTO bookedSeat... " />
+                <marker date="1530394960513" expanded="true" signature="2534:2610" ph="DELETE FROM bookedSeat... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Seat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Seat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#461#462#0" expanded="true" />
                 <element signature="e#495#496#0" expanded="true" />
@@ -199,21 +207,6 @@
                 <element signature="e#682#683#0" expanded="true" />
                 <element signature="e#723#724#0" expanded="true" />
                 <element signature="e#758#759#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeatDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <marker date="1530381475010" expanded="true" signature="991:1048" ph="SELECT colum... " />
               </folding>
             </state>
           </provider>
@@ -284,14 +277,14 @@
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Customer.java" />
         <option value="$PROJECT_DIR$/cinema/pom.xml" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java" />
-        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/ConnectionDao.java" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Seat.java" />
+        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java" />
+        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/ConnectionDao.java" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java" />
-        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java" />
+        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java" />
         <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java" />
-        <option value="$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java" />
       </list>
     </option>
   </component>
@@ -337,6 +330,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,10 +409,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -793,9 +786,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Movie" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Hall" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SeatDao" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ConnectionDao" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ConnectionDao" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Hall" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SeatDao" />
         <item index="4" class="java.lang.String" itemvalue="Application.MovieDao" />
       </list>
     </recent_temporary>
@@ -822,12 +815,13 @@
       <workItem from="1530026563022" duration="2209000" />
       <workItem from="1530193807466" duration="11301000" />
       <workItem from="1530272476207" duration="29897000" />
-      <workItem from="1530359941515" duration="16105000" />
+      <workItem from="1530359941515" duration="16167000" />
+      <workItem from="1530389698380" duration="6456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112164000" />
+    <option name="totallyTimeSpent" value="118682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1329" height="780" extended-state="6" />
@@ -846,7 +840,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19065562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19065562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1093,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,7 +1186,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/ConnectionDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
+        <state relative-caret-position="443">
           <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
@@ -1201,26 +1194,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cinema/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
+        <state relative-caret-position="383">
           <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java">
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <marker date="1530394960513" expanded="true" signature="1030:1087" ph="SELECT colum... " />
+            <marker date="1530394960513" expanded="true" signature="1881:1939" ph="INSERT INTO bookedSeat... " />
+            <marker date="1530394960513" expanded="true" signature="2534:2610" ph="DELETE FROM bookedSeat... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <marker date="1530394975037" expanded="true" signature="970:1058" ph="select movie... movie" />
+            <marker date="1530394975037" expanded="true" signature="1674:1743" ph="select movie... movie" />
+            <marker date="1530394975037" expanded="true" signature="3253:3328" ph="insert into movie... " />
+            <marker date="1530394975037" expanded="true" signature="4255:4319" ph="update movie... " />
+            <marker date="1530394975037" expanded="true" signature="4928:4959" ph="DELETE FROM movie... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <marker date="1530363906733" expanded="true" signature="918:973" ph="select * fro... worker" />
+            <marker date="1530363906733" expanded="true" signature="1662:1696" ph="select * fro... worker" />
+            <marker date="1530363906733" expanded="true" signature="2297:2317" ph="select * fro... worker" />
+            <marker date="1530363906733" expanded="true" signature="3346:3401" ph="insert into worker... " />
+            <marker date="1530363906733" expanded="true" signature="4106:4170" ph="update worker... " />
+            <marker date="1530363906733" expanded="true" signature="4722:4754" ph="DELETE FROM worker... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#531#532#0" expanded="true" />
             <element signature="e#556#557#0" expanded="true" />
@@ -1242,111 +1335,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/WorkerDao.java">
+    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Management.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="473">
+          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <marker date="1530363906733" expanded="true" signature="918:973" ph="select * fro... worker" />
-            <marker date="1530363906733" expanded="true" signature="1662:1696" ph="select * fro... worker" />
-            <marker date="1530363906733" expanded="true" signature="2297:2317" ph="select * fro... worker" />
-            <marker date="1530363906733" expanded="true" signature="3346:3401" ph="insert into worker... " />
-            <marker date="1530363906733" expanded="true" signature="4106:4170" ph="update worker... " />
-            <marker date="1530363906733" expanded="true" signature="4722:4754" ph="DELETE FROM worker... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#967#968#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/MovieDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <marker date="1530381738265" expanded="true" signature="970:1058" ph="select movie... movie" />
-            <marker date="1530381738265" expanded="true" signature="1674:1743" ph="select movie... movie" />
-            <marker date="1530381738265" expanded="true" signature="3250:3325" ph="insert into movie... " />
-            <marker date="1530381738265" expanded="true" signature="4252:4316" ph="update movie... " />
-            <marker date="1530381738265" expanded="true" signature="4925:4956" ph="DELETE FROM movie... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Hall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1060#1061#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/modules/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-          <folding>
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinema/src/main/java/com/system/cinema/dao/SeatDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <marker date="1530381475010" expanded="true" signature="991:1048" ph="SELECT colum... " />
           </folding>
         </state>
       </provider>

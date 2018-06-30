@@ -72,7 +72,7 @@ public class MovieDao {
         LocalDate localDate = LocalDate.of(Integer.valueOf(date[0]),Integer.valueOf(date[1]),Integer.valueOf(date[2]));
         LocalTime localTime = LocalTime.of(Integer.valueOf(time[0]),Integer.valueOf(time[1]));
         Hall hall = new Hall(result.getInt(7), result.getInt(8), result.getInt(9));
-        hall.addBookedSeats(id);
+        hall.updateBookedSeats(id);
         return new Movie(id, title, description, hall, localDate, localTime );
     }
 
@@ -127,10 +127,4 @@ public class MovieDao {
             throw new DaoException(this.getClass().getName() + " class caused problem");
         }
     }
-
-//    public static void main(String[] args) throws DaoException {
-//        dao = getDao();
-//        dao.save(new Movie("Spiderman", "Half-man half-spider, fighting in the name of law", new Hall(100, 100), LocalDate.now(), LocalTime.now()));
-//        dao.remove(4);
-//    }
 }

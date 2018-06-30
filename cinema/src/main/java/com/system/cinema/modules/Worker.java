@@ -14,12 +14,14 @@ public class Worker {
         this.password = password;
     }
 
-    public int getId() {
-        return id;
+    public Worker(String name, String login, String password) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -45,6 +47,13 @@ public class Worker {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return String.format("\nid: %10d name:%10s", this.id, this.name);
+    }
+
+
 
     // add movie
     // make reservation and payment

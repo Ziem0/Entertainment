@@ -1,2 +1,2 @@
-insert into manager(login, password) values('ziemo', '8');
+insert into management(login, password) values('ziemo', '8');
 

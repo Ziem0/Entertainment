@@ -44,7 +44,14 @@ public class ConnectionDao {
     public static void migrate() {
         Flyway fw = new Flyway();
         fw.setDataSource(DB_URL, null, null);
+//        fw.clean();
         fw.migrate();
     }
+
+//    public static void main(String[] args) {
+//        getConn();
+//        migrate();
+//        close();
+//    }
 
 }

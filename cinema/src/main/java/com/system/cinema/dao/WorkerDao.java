@@ -47,11 +47,11 @@ public class WorkerDao {
         return worker;
     }
 
-    public Worker getWorker(String name) throws DaoException{
+    public Worker getWorker(String id) throws DaoException{
         Worker worker = null;
         try {
-            preparedStatement = conn.prepareStatement("select * from worker where name is ?");
-            preparedStatement.setString(1, name);
+            preparedStatement = conn.prepareStatement("select * from worker where id is ?");
+            preparedStatement.setString(1, id);
             ResultSet result = preparedStatement.executeQuery();
             if (result.next()) {
                 worker = this.createWorker(result);
@@ -59,7 +59,7 @@ public class WorkerDao {
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            throw new DaoException(this.getClass().getName() + "caused a problem!");
+            throw new DaoException(this.getClass().getName() + "class caused a problem!");
         }
         return worker;
     }

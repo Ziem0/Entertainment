@@ -1,5 +1,9 @@
 package com.system.cinema.modules;
 
+import com.google.common.base.Strings;
+import com.system.cinema.dao.SeatDao;
+import com.system.cinema.exceptions.DaoException;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -10,6 +14,7 @@ public class Hall {
     private int rowLength;
     private int capacity;
     private List<Seat> seats;
+    private SeatDao seatDao = SeatDao.getDao();
 
     public Hall(int id, int columnLength, int rowLength) {
         this.id = id;
@@ -18,6 +23,11 @@ public class Hall {
         this.capacity = columnLength * rowLength;
         this.seats = new ArrayList<>();
         this.createSeats();
+    }
+
+    public Hall(int columnLength, int rowLength) {
+        this.columnLength = columnLength;
+        this.rowLength = rowLength;
     }
 
     public int getId() {
@@ -60,6 +70,8 @@ public class Hall {
         for (Seat s : seats) {
             if (s.getRow() == row && s.getColumn().equalsIgnoreCase(column) && s.isAvailable()) {
                 s.setSeatNotAvailable();
+
+                /// save seatDao
                 return true;
             }
         }
@@ -70,10 +82,23 @@ public class Hall {
         for (Seat s : seats) {
             if (s.getRow() == row && s.getColumn().equalsIgnoreCase(column) && !s.isAvailable()) {
                 s.setSeatAvailable();
+
+                // remove seatDao later
                 return true;
             }
         }
         return false;
+    }
+
+    public void addBookedSeats(int movieID) throws DaoException {
+        HashMap<String , List<Integer>> bookedSeats = seatDao.getBookedSeats(movieID);   //// ???
+        for (Seat s : seats) {
+            for (String c : bookedSeats.keySet()) {
+                if (s.getColumn().equalsIgnoreCase(c) && bookedSeats.get(c).contains(s.getRow())) {
+                    s.setSeatNotAvailable();
+                }
+            }
+        }
     }
 
     public void showHall() {
@@ -81,70 +106,27 @@ public class Hall {
         while (rowL-- > 0) {
             System.out.printf("[%d ]", rowL + 1);
         }
-        System.out.println("\n");
+        System.out.println("\t");
+        System.out.println(Strings.repeat("====", this.rowLength+1));
 
         for (int i = 0; i < seats.size(); ++i) {
             System.out.printf("%s", seats.get(i));
             if ((i + 1) < seats.size() && !seats.get(i).getColumn().equals(seats.get(i + 1).getColumn())) {
-                System.out.printf("\t[%s ]", seats.get(i).getColumn());
-                System.out.println("\t");
+                System.out.printf(" | | [%s]\n", seats.get(i).getColumn());
             }
         }
-        System.out.printf("\t[%s ]", seats.get(seats.size() - 1).getColumn());
+        System.out.printf(" | | [%s]\n\n", seats.get(seats.size() - 1).getColumn());
 
         rowL = this.rowLength;
-        System.out.println("\n");
         while (rowL-- > 0) {
-            System.out.printf("%s", "████");
-        }
-        System.out.println("\n");
-    }
-
-
-    private class Seat {
-        private boolean isAvailable;
-        private int row;
-        private String column;
-
-        public Seat(int row, String column) {
-            this.isAvailable = true;
-            this.row = row;
-            this.column = column;
-        }
-
-        private boolean isAvailable() {
-            return isAvailable;
-        }
-
-        private int getRow() {
-            return row;
-        }
-
-        private String getColumn() {
-            return column;
-        }
-
-        private void setSeatAvailable() {
-            isAvailable = true;
-        }
-
-        private void setSeatNotAvailable() {
-            isAvailable = false;
-        }
-
-        @Override
-        public String toString() {
-            if (this.isAvailable()) {
-                return "[" + this.getColumn()+ this.getRow() +"]";
-            }
-            return "[--]";
+            System.out.printf("%s\n", Strings.repeat("████",this.rowLength));
         }
     }
 
-    public static void main(String[] args) {
-        Hall hall = new Hall(1, 5, 3);
-        hall.bookSeat("b", 2);
-        hall.showHall();
-    }
+//    public static void main(String[] args) throws DaoException {
+//        Hall hall = new Hall(1, 5, 3);
+//        hall.bookSeat("b", 2);
+//        hall.showHall();
+//    }
 }
 

@@ -7,6 +7,7 @@ import com.system.cinema.modules.Movie;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,7 +33,6 @@ public class MovieDao {
     }
 
     public Movie getMovie(int idE) throws DaoException {
-        this.getMovies().forEach(a -> System.out.printf("\nid:%d title:%s\n", a.getId(), a.getTitle()));
         Movie movie = null;
         try {
             preparedStatement = conn.prepareStatement("select movie.*, hall.* from movie join hall on movie.hallID = hall.id where movie.id = ?;");
@@ -63,7 +63,7 @@ public class MovieDao {
         return movieList;
     }
 
-    private Movie createMovie(ResultSet result) throws SQLException {
+    private Movie createMovie(ResultSet result) throws SQLException, DaoException {
         int id = result.getInt(1);
         String title = result.getString(2);
         String description = result.getString(3);
@@ -72,17 +72,65 @@ public class MovieDao {
         LocalDate localDate = LocalDate.of(Integer.valueOf(date[0]),Integer.valueOf(date[1]),Integer.valueOf(date[2]));
         LocalTime localTime = LocalTime.of(Integer.valueOf(time[0]),Integer.valueOf(time[1]));
         Hall hall = new Hall(result.getInt(7), result.getInt(8), result.getInt(9));
-
+        hall.addBookedSeats(id);
         return new Movie(id, title, description, hall, localDate, localTime );
     }
 
+    public void save(Movie movie) throws DaoException {
+        String title = movie.getTitle();
+        String description = movie.getDescription();
+        int hallID = movie.getHall().getId();
+        String date = movie.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String hour = movie.getHour().format(DateTimeFormatter.ofPattern("H-m"));
+        try {
+            preparedStatement = conn.prepareStatement("insert into movie(title, description, hallID, date, hour) values(?,?,?,?,?)");
+            preparedStatement.setString(1,title);
+            preparedStatement.setString(2,description);
+            preparedStatement.setInt(3,hallID);
+            preparedStatement.setString(4,date);
+            preparedStatement.setString(5, hour);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused a problem");
+        }
 
-
-    //save update
-
-
-    public static void main(String[] args) throws DaoException {
-        dao = getDao();
-        System.out.println(dao.getMovie(1).getTitle());
     }
+
+    public void update(Movie movie) throws DaoException {
+        String title = movie.getTitle();
+        String description = movie.getDescription();
+        int hallID = movie.getHall().getId();
+        String date = movie.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String hour = movie.getHour().format(DateTimeFormatter.ofPattern("HH-mm"));
+        try {
+            preparedStatement = conn.prepareStatement("UPDATE movie SET title=?, description=?, hallID=?,date=?, hour=?");
+            preparedStatement.setString(1,title);
+            preparedStatement.setString(2, description);
+            preparedStatement.setInt(3, hallID);
+            preparedStatement.setString(4, date);
+            preparedStatement.setString(5, hour);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused problem");
+        }
+    }
+
+    public void remove(int id) throws DaoException {
+        try {
+            preparedStatement = conn.prepareStatement("DELETE FROM movie WHERE id IS ?");
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused problem");
+        }
+    }
+
+//    public static void main(String[] args) throws DaoException {
+//        dao = getDao();
+//        dao.save(new Movie("Spiderman", "Half-man half-spider, fighting in the name of law", new Hall(100, 100), LocalDate.now(), LocalTime.now()));
+//        dao.remove(4);
+//    }
 }

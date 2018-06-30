@@ -53,8 +53,7 @@ public class Worker {
         return String.format("\nid: %10d name:%10s", this.id, this.name);
     }
 
-
-
     // add movie
     // make reservation and payment
+
 }

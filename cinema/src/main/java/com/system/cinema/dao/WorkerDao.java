@@ -99,6 +99,7 @@ public class WorkerDao {
             preparedStatement.setString(2,login);
             preparedStatement.setString(3, password);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             throw new DaoException(this.getClass().getName() + "class caused a problem");
         }
@@ -116,8 +117,20 @@ public class WorkerDao {
             preparedStatement.setString(3, password);
             preparedStatement.setInt(4, id);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             throw new DaoException(this.getClass().getName() + "class caused a problem");
+        }
+    }
+
+    public void remove(int id) throws DaoException {
+        try {
+            preparedStatement = conn.prepareStatement("DELETE FROM worker WHERE id IS ?");
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new DaoException(this.getClass().getName() + " class caused problem");
         }
     }
 }

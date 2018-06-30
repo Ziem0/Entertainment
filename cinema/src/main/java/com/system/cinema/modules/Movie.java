@@ -1,5 +1,8 @@
 package com.system.cinema.modules;
 
+import com.system.cinema.dao.MovieDao;
+import com.system.cinema.exceptions.DaoException;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -11,6 +14,7 @@ public class Movie {
     private Hall hall;
     private LocalDate date;
     private LocalTime hour;
+
 
     public Movie(Integer id, String title, String description, Hall hall, LocalDate localDate, LocalTime localTime) {
         this.id = id;
@@ -52,5 +56,15 @@ public class Movie {
     public LocalTime getHour() {
         return hour;
     }
+
+
+    public static void main(String[] args) throws DaoException {
+        MovieDao dao = MovieDao.getDao();
+        Movie m = dao.getMovie(2);
+        System.out.println(m.getTitle());
+        System.out.println(m.getHall().calculateAvailableSeats());
+        m.getHall().showHall();
+    }
+
 }
 

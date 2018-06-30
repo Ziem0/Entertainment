@@ -107,6 +107,7 @@
             <groupId>com.entertainment.cipher</groupId>
             <artifactId>enigma</artifactId>
             <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

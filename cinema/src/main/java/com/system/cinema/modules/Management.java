@@ -1,6 +1,5 @@
 package com.system.cinema.modules;
 
-import com.google.common.base.Strings;
 import com.system.cinema.dao.ManagementDao;
 import com.system.cinema.dao.WorkerDao;
 import com.system.cinema.exceptions.DaoException;
@@ -30,7 +29,7 @@ public class Management {
         workerDao.update(worker);
     }
 
-    public void listAllWorkers() throws DaoException {
+    public void workersAsList() throws DaoException {
         workerDao.getWorkers().forEach(System.out::println);
     }
 

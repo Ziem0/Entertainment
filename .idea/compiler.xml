@@ -9,12 +9,14 @@
         <module name="checker" />
         <module name="cinema" />
         <module name="enigma" />
+        <module name="entities" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="checker" target="1.8" />
       <module name="cinema" target="1.8" />
       <module name="enigma" target="1.8" />
+      <module name="entities" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>

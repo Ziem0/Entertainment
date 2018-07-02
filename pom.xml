@@ -128,5 +128,6 @@
     <!--</dependencies>-->
   <modules>
     <module>cinema</module>
+    <module>entities</module>
   </modules>
 </project>

@@ -37,6 +37,8 @@ public class Management {
         workerDao.remove(id);
     }
 
+
+
     //update worker --> controller
     //delete worker --> controller --> list Worker and remove by ID
     //view worker  --> controller

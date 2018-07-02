@@ -1,5 +1,5 @@
 create table if not exists customer(
-	`id` INTEGER PRIMARY KEY NOT NULL UNIQUE,
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
 	`name` TXT,
 	`email` TXT,
 	`phone` INTEGER,

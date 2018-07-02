@@ -1,5 +1,5 @@
 create table if not exists hall(
-	`id` INTEGER PRIMARY KEY NOT NULL UNIQUE,
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
 	`rowLength` INTEGER,
 	`columnLength` INTEGER
 );

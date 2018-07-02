@@ -1,5 +1,5 @@
 create table if not exists movie(
-	`id` INTEGER PRIMARY KEY UNIQUE,
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
 	`title` TXT,
 	`description` TXT,
 	`hallID` INTEGER,

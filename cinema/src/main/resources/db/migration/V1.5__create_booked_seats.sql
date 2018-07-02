@@ -1,5 +1,5 @@
 create table if not exists bookedSeat(
-	`id` INTEGER PRIMARY KEY NOT NULL UNIQUE,
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
 	`movieID` INTEGER,
 	`column` TXT,
 	`row` INTEGER,

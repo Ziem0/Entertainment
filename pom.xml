@@ -21,7 +21,12 @@
             </activation>
             <modules>
                 <module>enigma</module>
-                <module>checker</module>
+                <module>client</module>
+                <module>worker</module>
+                <module>manager</module>
+                <module>entities</module>
+                <module>service</module>
+                <module>dao</module>
             </modules>
         </profile>
         <profile>
@@ -34,6 +39,42 @@
             <id>checker</id>
             <modules>
                 <module>checker</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>worker</id>
+            <modules>
+                <module>worker</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>manager</id>
+            <modules>
+                <module>manager</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>client</id>
+            <modules>
+                <module>client</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>entities</id>
+            <modules>
+                <module>entities</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>service</id>
+            <modules>
+                <module>service</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>dao</id>
+            <modules>
+                <module>dao</module>
             </modules>
         </profile>
     </profiles>
@@ -105,29 +146,13 @@
         </plugins>
     </build>
 
-    <!--<dependencies>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.google.guava/guava &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>com.google.guava</groupId>-->
-            <!--<artifactId>guava</artifactId>-->
-            <!--<version>25.1-jre</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.xerial</groupId>-->
-            <!--<artifactId>sqlite-jdbc</artifactId>-->
-            <!--<version>3.23.1</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/junit/junit &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>junit</groupId>-->
-            <!--<artifactId>junit</artifactId>-->
-            <!--<version>4.12</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-    <!--</dependencies>-->
   <modules>
     <module>cinema</module>
     <module>entities</module>
+    <module>dao</module>
+    <module>client</module>
+    <module>worker</module>
+    <module>manager</module>
+    <module>service</module>
   </modules>
 </project>

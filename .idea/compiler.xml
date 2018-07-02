@@ -6,18 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="checker" />
         <module name="cinema" />
+        <module name="client" />
+        <module name="dao" />
         <module name="enigma" />
         <module name="entities" />
+        <module name="manager" />
+        <module name="service" />
+        <module name="worker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="checker" target="1.8" />
       <module name="cinema" target="1.8" />
+      <module name="client" target="1.8" />
+      <module name="dao" target="1.8" />
       <module name="enigma" target="1.8" />
       <module name="entities" target="1.8" />
+      <module name="manager" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="service" target="1.8" />
+      <module name="worker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
